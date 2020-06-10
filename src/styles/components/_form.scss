@@ -1,0 +1,73 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.form-heading {
+  font-size: $font-size-small;
+  margin: $s-size;
+  color: black;
+}
+
+.form__error {
+  margin: 0 0 $m-size 0;
+  font-style: italic;
+}
+
+.optionally-rendered-date {
+  font-size: $font-size-small;
+}
+
+.createdAt-section {
+  display: flex;
+  flex-direction: row;
+  margin: $m-size;
+  border-radius: 5px;
+  border-color: rgb(194, 191, 191);
+}
+
+.createdAt {
+  padding: 0 $m-size;
+}
+
+.date-edit {
+  display: flex;
+  flex-direction: row;
+  margin: $m-size;
+}
+
+.button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: $light-grey;
+  margin: 0;
+}
+
+.remove-button-container {
+  margin: $m-size;
+}
+
+.other-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: $m-size;
+}
+
+.horizontal-line {
+  color: rgb(194, 191, 191);
+  border: 0.5px solid rgb(194, 191, 191);
+  width: 100%;
+  border-left-width: 0;
+  border-right-width: 0;
+  overflow: hidden;
+  margin-bottom: $s-size;
+  margin-top: 0;
+  padding: 0;
+}

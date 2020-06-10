@@ -1,0 +1,101 @@
+.button {
+  background: $light-blue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: $font-size-small;
+  font-weight: 300;
+  line-height: 1;
+  padding: $s-size;
+  width: $button-width;
+  text-decoration: none;
+  &:hover {
+    background: lighten($color: $light-blue, $amount: 6%);
+  }
+}
+
+.button--link {
+  color: black;
+  background: none;
+  &:hover {
+    background: white;
+  }
+}
+
+.button--login {
+  padding: $s-size;
+  width: auto;
+  font-size: $font-size-large;
+  box-shadow: 0 2px #888;
+  &:active {
+    box-shadow: 0 1px #888;
+    transform: translateY(1px);
+  }
+}
+
+.button--delete {
+  background: rgb(250, 60, 60);
+  margin: 0 1rem;
+  margin-right: 0;
+  &:hover {
+    background: lighten(rgb(250, 60, 60), 6%);
+  }
+}
+
+.button--cancel {
+  background: white;
+  color: black;
+  border: 1px solid lighten($dark-grey, 50%);
+  &:hover {
+    border-color: black;
+    background: white;
+  }
+}
+
+.edit-button {
+  background: none;
+  border: none;
+}
+
+.edit-icon {
+  color: darken($light-grey, 10%);
+  &:hover {
+    color: $light-blue;
+  }
+}
+
+.right-buttons {
+  margin: 0 1rem;
+  margin-right: 0;
+}
+
+.grey-button {
+  color: darken($light-grey, 7%);
+  &:hover {
+    color: $light-blue;
+  }
+}
+
+.plus-button {
+  color: white;
+}
+
+.footer-button {
+  padding: $m-size;
+  background: none;
+  border: none;
+  position: relative;
+  left: 10%;
+}
+
+.circular-container {
+  background-color: $light-blue;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
+  &:hover {
+    background: lighten($color: $light-blue, $amount: 6%);
+  }
+}
