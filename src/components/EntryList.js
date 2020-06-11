@@ -7,7 +7,7 @@ export const EntryList = (props) => (
   <div className='entry-list'>
     {props.entries.length === 0 ? (
       <div className='entry-item entry-item--message'>
-        <span className='entry-item--message'>No entries</span>
+        <span>No entries</span>
       </div>
     ) : (
       props.entries.map((entry) => {

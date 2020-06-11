@@ -1,7 +1,12 @@
 .entry-list {
   display: flex;
   flex-direction: column;
-  margin: $xxxl-size 0 12rem 0;
+  align-items: stretch;
+  margin: 8rem $s-size 12rem $s-size;
+  min-width: 32rem;
+  @media (min-width: $desktop-breakpoint) {
+    margin-bottom: $l-size;
+  }
 }
 
 .entry-item {
@@ -14,11 +19,13 @@
   width: 100%;
   border: none;
   border-radius: 5px;
-  margin: $s-size 0 0 0;
+  margin: 1rem 0;
   color: black;
 }
 
 .entry-item-title {
+  margin-top: 0;
+  margin-bottom: 1rem;
   font-size: $font-size-large;
 }
 
@@ -28,39 +35,27 @@
   }
 }
 
-.entry-item-footer-container {
-  font-size: $font-size-small;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.entry-item-footer-leftside {
-  width: 40%;
-  overflow-wrap: break-word;
-}
-
-.entry-list-title {
+.entry-item-date {
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: $light-blue;
   font-size: $font-size-small;
-  word-break: break-all;
+  word-break: break-word;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
-.entry-list-text {
+.entry-item-text {
   text-align: left;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 .entry-item--message {
   font-style: italic;
-}
-
-.entry-item--footer {
-  padding: 0;
-  margin: $s-size 0;
-  color: grey;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
