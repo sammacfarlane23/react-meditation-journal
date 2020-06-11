@@ -70,10 +70,10 @@
   margin-right: 0;
 }
 
-.grey-button {
-  color: darken($light-grey, 7%);
+.white-button {
+  color: white;
   &:hover {
-    color: $light-blue;
+    color: $light-grey;
   }
 }
 

@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  margin: 8rem $s-size 12rem $s-size;
+  margin: 10rem $s-size 12rem $s-size;
   min-width: 32rem;
   @media (min-width: $desktop-breakpoint) {
     margin-bottom: $l-size;
@@ -17,7 +17,10 @@
   background: white;
   padding: $m-size;
   width: 100%;
-  border: none;
+  border: 1px solid $light-blue;
+  box-shadow: 1px 1px 0px $light-blue, 2px 2px 0px $light-blue,
+    3px 3px 0px $light-blue, 4px 4px 0px $light-blue, 5px 5px 0px $light-blue,
+    6px 6px 0px $light-blue;
   border-radius: 5px;
   margin: 1rem 0;
   color: black;
@@ -54,6 +57,8 @@
 .entry-item--message {
   font-style: italic;
   background: none;
+  border: none;
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
