@@ -41,10 +41,15 @@
   color: black;
 }
 
-.input-date {
+.input-time {
   font-weight: 300;
   background: white;
   border: none;
   text-align: center;
   font-size: $font-size-small;
+  margin: 0 $m-size;
+}
+
+.single-date-picker {
+  margin: 0 $m-size;
 }

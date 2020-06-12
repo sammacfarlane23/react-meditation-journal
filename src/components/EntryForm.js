@@ -106,19 +106,21 @@ export default class EntryForm extends React.Component {
         )}
         {this.state.editDate && (
           <div className='date-edit'>
-            <SingleDatePicker
-              date={this.state.createdAt}
-              onDateChange={this.onDateChange}
-              onFocusChange={this.onFocusChange}
-              focused={this.state.calendarFocused}
-              numberOfMonths={1}
-              isOutsideRange={() => false}
-              displayFormat='DD/MM/YYYY'
-              isOutsideRange={(d) => d.isAfter(moment())}
-              withPortal={true}
-            />
+            <div className='single-date-picker'>
+              <SingleDatePicker
+                date={this.state.createdAt}
+                onDateChange={this.onDateChange}
+                onFocusChange={this.onFocusChange}
+                focused={this.state.calendarFocused}
+                numberOfMonths={1}
+                isOutsideRange={() => false}
+                displayFormat='DD/MM/YYYY'
+                isOutsideRange={(d) => d.isAfter(moment())}
+                withPortal={true}
+              />
+            </div>
             <input
-              className='input-date'
+              className='input-time'
               type='time'
               onChange={this.onTimeChange}
               value={moment(this.state.createdAt).format('HH:mm')}
