@@ -5,9 +5,14 @@ import selectEntries from '../selectors/entries';
 
 export const EntryList = (props) => (
   <div className='entry-list'>
-    {props.entries.length === 0 ? (
+    {!props.hasEntries ? (
       <div className='entry-item entry-item--message'>
-        <span>No entries</span>
+        Welcome to Meditation Journal App. Click the plus button below to add an
+        entry.
+      </div>
+    ) : props.entries.length === 0 ? (
+      <div className='entry-item entry-item--message'>
+        <span>No matching entries :(</span>
       </div>
     ) : (
       props.entries.map((entry) => {
@@ -19,6 +24,7 @@ export const EntryList = (props) => (
 
 const mapStateToProps = (state) => {
   return {
+    hasEntries: !!state.entries.length,
     entries: selectEntries(state.entries, state.filters),
   };
 };
