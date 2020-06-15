@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { startGoogleLogin, startFacebookLogin } from '../actions/auth';
+import { startGoogleLogin } from '../actions/auth';
 
 export const LoginPage = ({ startGoogleLogin, startFacebookLogin }) => (
   <div className='box-layout'>
@@ -14,12 +14,6 @@ export const LoginPage = ({ startGoogleLogin, startFacebookLogin }) => (
         >
           Login with Google
         </button>
-        <button
-          className='button button--login-facebook'
-          onClick={startFacebookLogin}
-        >
-          Login with Facebook
-        </button>
       </div>
     </div>
   </div>
@@ -27,7 +21,6 @@ export const LoginPage = ({ startGoogleLogin, startFacebookLogin }) => (
 
 const mapDispatchToProps = (dispatch) => ({
   startGoogleLogin: () => dispatch(startGoogleLogin()),
-  startFacebookLogin: () => dispatch(startFacebookLogin()),
 });
 
 export default connect(undefined, mapDispatchToProps)(LoginPage);
