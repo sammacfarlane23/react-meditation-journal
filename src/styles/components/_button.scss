@@ -23,7 +23,9 @@
   }
 }
 
-.button--login {
+.button--login-google {
+  background: #de5246;
+  margin-bottom: $s-size;
   padding: $s-size;
   width: auto;
   font-size: $font-size-large;
@@ -32,6 +34,33 @@
     box-shadow: 0 1px #888;
     transform: translateY(1px);
   }
+  &:hover {
+    background: lighten($color: #de5246, $amount: 6%);
+  }
+}
+
+.button--login-facebook {
+  background: #3b5998;
+  padding: $s-size;
+  width: auto;
+  font-size: $font-size-large;
+  box-shadow: 0 2px #888;
+  &:active {
+    box-shadow: 0 1px #888;
+    transform: translateY(1px);
+  }
+  &:hover {
+    background: lighten($color: #3b5998, $amount: 6%);
+  }
+}
+
+.login-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: auto;
+  margin: 0 1.4rem;
 }
 
 .button--delete {
