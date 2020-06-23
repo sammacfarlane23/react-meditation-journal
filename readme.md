@@ -10,7 +10,7 @@ Live Demo [Here](http://meditation-journal-app.herokuapp.com/dashboard)
 
 ## Technologies
 
-This project was built with React and Redux and utilises Firebase for authentication and data storage.
+This project was built with [React](https://reactjs.org/) and Redux and utilises Firebase for authentication and data storage.
 
 ## User Stories
 
