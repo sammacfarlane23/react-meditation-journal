@@ -10,7 +10,7 @@ Live Demo [Here](http://meditation-journal-app.herokuapp.com/dashboard)
 
 ## Technologies
 
-This project was built with <a href="https://reactjs.org/">React</a> and <a href="https://redux.js.org/">Redux</a> and utilises Firebase for authentication and data storage.
+This project was built with <a href="https://reactjs.org/" target="_blank">React</a> and <a href="https://redux.js.org/" target="_blank">Redux</a> and utilises Firebase for authentication and data storage.
 
 ## User Stories
 
