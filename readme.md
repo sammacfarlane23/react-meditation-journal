@@ -2,7 +2,7 @@
 
 Meditation Journal App is a simple web app that allows a user to journal their experiences in their meditation practice.
 
-![React Meditation Journal App Demo](public/images/demo.gif | height=60)
+![React Meditation Journal App Demo](public/images/demo.gif)
 
 Live Demo [Here](http://meditation-journal-app.herokuapp.com/dashboard)
 
