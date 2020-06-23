@@ -10,16 +10,18 @@ Live Demo [Here](http://meditation-journal-app.herokuapp.com/dashboard)
 
 ## Technologies
 
-It was built with React and Redux and utilises Firebase for authentication and data storage.
+This project was built with React and Redux and utilises Firebase for authentication and data storage.
 
-## Installation
+## User Stories
 
-## Running the App
+- A user can login with Google
 
-From the project directory, running
+- A user can create a new journal entry with optional title and adjust the date and time
 
-```
-yarn run dev-server
-```
+- A user should see all journal entries on the dashboard
 
-will start the app in development mode. Open [http://localhost:8080/](http://localhost:8080/) in your browser to view.
+- A user can click any entry to edit its title, entry text, date or time or delete it
+
+- A user can search all entries by title or entry text
+
+- A user can logout
