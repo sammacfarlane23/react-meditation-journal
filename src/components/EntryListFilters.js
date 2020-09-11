@@ -6,6 +6,7 @@ export class EntryListFilters extends React.Component {
   onTextChange = (e) => {
     this.props.setTextFilter(e.target.value);
   };
+
   render() {
     return (
       <div>

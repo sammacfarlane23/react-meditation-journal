@@ -5,7 +5,9 @@ import { connect } from 'react-redux';
 import SearchIcon from './SearchIcon';
 import EntryListFilters from './EntryListFilters';
 import { startLogout } from '../actions/auth';
+import { setTextFilter } from '../actions/filters';
 import LogoutIcon from './LogoutIcon';
+import CrossIcon from './CrossIcon';
 
 export class Header extends React.Component {
   state = {
@@ -13,6 +15,7 @@ export class Header extends React.Component {
   };
 
   showHideSearch = () => {
+    this.props.setTextFilter('');
     this.setState(() => ({
       showSearchBar: !this.state.showSearchBar,
     }));
@@ -30,6 +33,7 @@ export class Header extends React.Component {
     const domNode = ReactDOM.findDOMNode(this);
 
     if (!domNode || !domNode.contains(e.target)) {
+      this.props.setTextFilter('');
       this.setState({ showSearchBar: false });
     }
   };
@@ -48,7 +52,11 @@ export class Header extends React.Component {
               <EntryListFilters tabIndex='0' onBlur={this.showHideSearch} />
             )}
             <div className='right-header'>
-              <SearchIcon showSearch={this.showHideSearch} />
+              {this.state.showSearchBar ? (
+                <CrossIcon showSearch={this.showHideSearch} />
+              ) : (
+                <SearchIcon showSearch={this.showHideSearch} />
+              )}
               <LogoutIcon startLogout={this.props.startLogout} />
             </div>
           </div>
@@ -59,6 +67,7 @@ export class Header extends React.Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
+  setTextFilter: (text) => dispatch(setTextFilter(text)),
   startLogout: () => dispatch(startLogout()),
 });
 
