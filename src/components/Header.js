@@ -51,7 +51,7 @@ export class Header extends React.Component {
             {this.state.showSearchBar && (
               <EntryListFilters tabIndex='0' onBlur={this.showHideSearch} />
             )}
-            <div className='right-header'>
+            <div className='header__right'>
               {this.state.showSearchBar ? (
                 <CrossIcon showSearch={this.showHideSearch} />
               ) : (

@@ -30,19 +30,16 @@ export class EntryItem extends React.Component {
   render() {
     return (
       <div>
-        <button
-          className='entry-item entry-item--button'
-          onClick={this.showModal}
-        >
+        <button className='entry-item' onClick={this.showModal}>
           <div>
-            <h1 className='entry-item-date'>
+            <h1 className='entry-item__date'>
               {moment(this.props.createdAt).format('DD MMM YYYY HH:mm')}
             </h1>
           </div>
           {this.props.title && (
-            <h1 className='entry-item-title'>{this.props.title}</h1>
+            <h1 className='entry-item__title'>{this.props.title}</h1>
           )}
-          <div className='entry-item-text'>{this.props.entryText}</div>
+          <div className='entry-item__text'>{this.props.entryText}</div>
         </button>
         <EntryModal
           showModal={this.state.show}

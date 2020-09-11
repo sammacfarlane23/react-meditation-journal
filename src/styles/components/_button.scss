@@ -10,6 +10,7 @@
   padding: $s-size;
   width: $button-width;
   text-decoration: none;
+  outline: none;
   &:hover {
     background: lighten($color: $light-blue, $amount: 6%);
   }
@@ -98,28 +99,22 @@
   }
 }
 
-.right-buttons {
+.button--right {
   margin: 0 1rem;
   margin-right: 0;
 }
 
-.white-button {
+.button--big {
   color: white;
   &:hover {
     color: $light-grey;
   }
-}
-
-.plus-button {
-  color: white;
-}
-
-.footer-button {
   padding: $m-size;
   background: none;
   border: none;
   position: relative;
   left: 10%;
+  outline: none;
 }
 
 .circular-container {

@@ -25,10 +25,10 @@ export class AddEntryButton extends React.Component {
       <div>
         {!this.state.show && (
           <button
-            className='footer-button circular-container'
+            className='button--big circular-container'
             onClick={this.showModal}
           >
-            <FontAwesomeIcon icon={faPlus} className='plus-button' size='2x' />
+            <FontAwesomeIcon icon={faPlus} size='2x' />
           </button>
         )}
         <EntryModal

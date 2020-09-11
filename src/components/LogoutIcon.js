@@ -4,8 +4,8 @@ import { faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
 
 export default (props) => (
   <div>
-    <button className='footer-button' onClick={props.startLogout}>
-      <FontAwesomeIcon icon={faSignOutAlt} className='white-button' size='2x' />
+    <button className='button--big' onClick={props.startLogout}>
+      <FontAwesomeIcon icon={faSignOutAlt} size='2x' />
     </button>
   </div>
 );

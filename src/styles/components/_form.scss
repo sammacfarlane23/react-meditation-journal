@@ -6,12 +6,6 @@
   width: 100%;
 }
 
-.form-heading {
-  font-size: $font-size-small;
-  margin: $s-size;
-  color: black;
-}
-
 .form__error {
   margin: 0 0 $m-size 0;
   font-style: italic;
@@ -25,7 +19,7 @@
   border-color: rgb(194, 191, 191);
 }
 
-.createdAt {
+.createdAt-section__text {
   padding: 0 $m-size;
 }
 

@@ -74,7 +74,6 @@ export default class EntryForm extends React.Component {
     return (
       <form className='form' onSubmit={this.onSubmit}>
         <input
-          className='form-heading'
           className='title'
           type='text'
           placeholder='Title (optional)'
@@ -92,7 +91,7 @@ export default class EntryForm extends React.Component {
         ></textarea>
         {!this.state.editDate && (
           <div className='createdAt-section'>
-            <p className='createdAt'>
+            <p className='createdAt-section__text'>
               {moment(this.state.createdAt).format('DD MMM YYYY HH:mm')}
             </p>
             <button
@@ -147,11 +146,11 @@ export default class EntryForm extends React.Component {
             )}
           </div>
           <div className='other-button-container'>
-            <button className='button right-buttons'>Save</button>
+            <button className='button button--right'>Save</button>
             <button
               type='button'
               onClick={this.closeModal}
-              className='button right-buttons button--cancel'
+              className='button button--right button--cancel'
             >
               Cancel
             </button>
