@@ -127,3 +127,13 @@
     background: lighten($color: $light-blue, $amount: 6%);
   }
 }
+
+.button-position {
+  background: none;
+  position: fixed;
+  bottom: 0;
+  top: 85%;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+}

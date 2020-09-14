@@ -22,7 +22,7 @@ export class AddEntryButton extends React.Component {
   };
   render() {
     return (
-      <div>
+      <div className='button-position'>
         {!this.state.show && (
           <button
             className='button--big circular-container'
