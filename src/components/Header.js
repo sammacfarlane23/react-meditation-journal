@@ -44,9 +44,7 @@ export class Header extends React.Component {
         <div className='content-container'>
           <div className='header__content'>
             {!this.state.showSearchBar && (
-              <Link className='header__title' to='/dashboard'>
-                <h1>JOURNAL</h1>
-              </Link>
+              <h1 className='header__title'>JOURNAL</h1>
             )}
             {this.state.showSearchBar && (
               <EntryListFilters tabIndex='0' onBlur={this.showHideSearch} />
