@@ -15,17 +15,21 @@ export default class EntryForm extends React.Component {
       editDate: false,
     };
   }
+
   onEntryTextChange = (e) => {
     const entryText = e.target.value;
     this.setState(() => ({ entryText }));
   };
+
   onRemove = () => {
     this.props.onRemove(this.props.entry);
   };
+
   onTitleChange = (e) => {
     const title = e.target.value;
     this.setState(() => ({ title }));
   };
+
   onTimeChange = (e) => {
     const currentDate = moment(this.state.createdAt).startOf('day');
     const timeOfDay = moment.duration(
@@ -35,9 +39,11 @@ export default class EntryForm extends React.Component {
     const createdAt = moment(currentDate).add(timeOfDay);
     this.setState(() => ({ createdAt }));
   };
+
   onFocusChange = ({ focused }) => {
     this.setState(() => ({ calendarFocused: focused }));
   };
+
   onDateChange = (createdAt) => {
     const timeOfDay =
       moment(this.state.createdAt) -
@@ -47,12 +53,15 @@ export default class EntryForm extends React.Component {
       this.setState(() => ({ createdAt: addTime }));
     }
   };
+
   onEditDate = () => {
     this.setState(() => ({ editDate: true }));
   };
+
   closeModal = () => {
     this.props.closeModal();
   };
+
   onSubmit = (e) => {
     e.preventDefault();
 
