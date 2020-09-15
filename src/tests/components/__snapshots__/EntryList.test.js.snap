@@ -19,7 +19,7 @@ exports[`should render EntryList with entries 1`] = `
     title="title"
   />
   <Connect(EntryItem)
-    createdAt={1000}
+    createdAt={1600000000000}
     entryText="This is third entry"
     id="3"
     key="3"

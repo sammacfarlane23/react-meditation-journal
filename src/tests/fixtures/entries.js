@@ -15,7 +15,7 @@ const entries = [
     id: '3',
     entryText: 'This is third entry',
     title: '',
-    createdAt: 1000,
+    createdAt: 1600000000000,
   },
 ];
 

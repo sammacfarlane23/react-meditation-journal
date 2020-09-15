@@ -1,0 +1,209 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EntryForm correctly 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    className="title"
+    onChange={[Function]}
+    placeholder="Title (optional)"
+    type="text"
+    value=""
+  />
+  <hr
+    className="horizontal-line"
+  />
+  <textarea
+    className="text-area"
+    onChange={[Function]}
+    placeholder="Describe your experience here..."
+    rows="10"
+    value=""
+  />
+  <div
+    className="createdAt-section"
+  >
+    <p
+      className="createdAt-section__text"
+    >
+      01 Jan 1970 01:00
+    </p>
+    <button
+      className="edit-button"
+      onClick={[Function]}
+      type="button"
+    >
+      <Component />
+    </button>
+  </div>
+  <div
+    className="button-container"
+  >
+    <div
+      className="remove-button-container"
+    />
+    <div
+      className="other-button-container"
+    >
+      <button
+        className="button button--right"
+      >
+        Save
+      </button>
+      <button
+        className="button button--right button--cancel"
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`should render EntryForm correctly with entry data 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    className="title"
+    onChange={[Function]}
+    placeholder="Title (optional)"
+    type="text"
+    value=""
+  />
+  <hr
+    className="horizontal-line"
+  />
+  <textarea
+    className="text-area"
+    onChange={[Function]}
+    placeholder="Describe your experience here..."
+    rows="10"
+    value="This is third entry"
+  />
+  <div
+    className="createdAt-section"
+  >
+    <p
+      className="createdAt-section__text"
+    >
+      13 Sep 2020 13:26
+    </p>
+    <button
+      className="edit-button"
+      onClick={[Function]}
+      type="button"
+    >
+      <Component />
+    </button>
+  </div>
+  <div
+    className="button-container"
+  >
+    <div
+      className="remove-button-container"
+    >
+      <button
+        className="button button--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </div>
+    <div
+      className="other-button-container"
+    >
+      <button
+        className="button button--right"
+      >
+        Save
+      </button>
+      <button
+        className="button button--right button--cancel"
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`should render EntryForm correctly with entry data and delete button 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    className="title"
+    onChange={[Function]}
+    placeholder="Title (optional)"
+    type="text"
+    value=""
+  />
+  <hr
+    className="horizontal-line"
+  />
+  <textarea
+    className="text-area"
+    onChange={[Function]}
+    placeholder="Describe your experience here..."
+    rows="10"
+    value="This is third entry"
+  />
+  <div
+    className="createdAt-section"
+  >
+    <p
+      className="createdAt-section__text"
+    >
+      13 Sep 2020 13:26
+    </p>
+    <button
+      className="edit-button"
+      onClick={[Function]}
+      type="button"
+    >
+      <Component />
+    </button>
+  </div>
+  <div
+    className="button-container"
+  >
+    <div
+      className="remove-button-container"
+    >
+      <button
+        className="button button--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </div>
+    <div
+      className="other-button-container"
+    >
+      <button
+        className="button button--right"
+      >
+        Save
+      </button>
+      <button
+        className="button button--right button--cancel"
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</form>
+`;

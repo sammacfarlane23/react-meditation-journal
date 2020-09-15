@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render Header correctly 1`] = `
+<header
+  className="header"
+>
+  <div
+    className="content-container"
+  >
+    <div
+      className="header__content"
+    >
+      <h1
+        className="header__title"
+      >
+        JOURNAL
+      </h1>
+      <div
+        className="header__right"
+      >
+        <Component
+          showSearch={[Function]}
+        />
+        <Component />
+      </div>
+    </div>
+  </div>
+</header>
+`;

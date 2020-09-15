@@ -14,7 +14,7 @@ export class EntryItem extends React.Component {
     this.setState(() => ({ show: true }));
   };
 
-  onRemove = (entry) => {
+  onRemove = () => {
     this.props.startRemoveEntry({ id: this.props.entry.id });
     this.setState({ show: false });
   };

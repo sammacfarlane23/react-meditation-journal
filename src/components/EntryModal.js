@@ -3,7 +3,7 @@ import ReactModal from 'react-modal';
 import { connect } from 'react-redux';
 import EntryForm from './EntryForm';
 
-const EntryModal = (props) => (
+export const EntryModal = (props) => (
   <ReactModal
     className='modal'
     isOpen={props.showModal}
