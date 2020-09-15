@@ -1,9 +1,8 @@
 import React from 'react';
-import ReactShallowRenderer from 'react-test-renderer/shallow';
+import { shallow } from 'enzyme';
 import LoadingPage from '../../components/LoadingPage';
 
 test('should render loading page correctly', () => {
-  const renderer = new ReactShallowRenderer();
-  renderer.render(<LoadingPage />);
-  expect(renderer.getRenderOutput()).toMatchSnapshot();
+  const wrapper = shallow(<LoadingPage />);
+  expect(wrapper).toMatchSnapshot();
 });
