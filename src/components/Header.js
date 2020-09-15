@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import SearchIcon from './SearchIcon';
 import EntryListFilters from './EntryListFilters';
