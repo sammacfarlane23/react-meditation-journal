@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render EntryList with entries 1`] = `
+<div
+  className="entry-list"
+>
+  <Connect(EntryItem)
+    createdAt={0}
+    entryText="This is an entry"
+    id="1"
+    key="1"
+    title=""
+  />
+  <Connect(EntryItem)
+    createdAt={-1000}
+    entryText="This is another entry"
+    id="2"
+    key="2"
+    title="title"
+  />
+  <Connect(EntryItem)
+    createdAt={1000}
+    entryText="This is third entry"
+    id="3"
+    key="3"
+    title=""
+  />
+</div>
+`;
+
+exports[`should render no entries message if there are entries but none selected 1`] = `
+<div
+  className="entry-list"
+>
+  <div
+    className="entry-item entry-item--message"
+  >
+    <span>
+      No matching entries :(
+    </span>
+  </div>
+</div>
+`;
+
+exports[`should render welcome message if no entries 1`] = `
+<div
+  className="entry-list"
+>
+  <div
+    className="entry-item entry-item--message"
+  >
+    Welcome to Meditation Journal App. Click the plus button below to add an entry.
+  </div>
+</div>
+`;
