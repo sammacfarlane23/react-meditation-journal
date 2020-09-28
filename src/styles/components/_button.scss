@@ -118,7 +118,11 @@
 }
 
 .circular-container {
-  background-color: $light-blue;
+  background-image: linear-gradient(
+    45deg,
+    darken($light-blue, 20%),
+    $light-blue
+  );
   width: 64px;
   height: 64px;
   border-radius: 50%;

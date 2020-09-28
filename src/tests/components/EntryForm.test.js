@@ -79,3 +79,22 @@ test('should set calendar focus after clicking edit date to bring up date picker
   wrapper.find('SingleDatePicker').prop('onFocusChange')({ focused });
   expect(wrapper.state('calendarFocused')).toBe(focused);
 });
+
+test('should call closeModal prop on clicking cancel button', () => {
+  const closeModalSpy = jest.fn();
+  const wrapper = shallow(<EntryForm closeModal={closeModalSpy} />);
+  wrapper.find('button').at(2).simulate('click');
+  expect(closeModalSpy).toBeCalled();
+});
+
+// test('should set new time on time change after clicking edit date to bring up time picker', () => {
+//   const currentDate = moment().startOf('day');
+//   const timeOfDay = moment.duration(2, 'hours');
+//   const createdAt = moment(moment().startOf('day')).add(timeOfDay);
+//   const wrapper = shallow(<EntryForm />);
+//   wrapper.find('button').at(0).simulate('click');
+//   wrapper.find('input').at(1).simulate('change', {
+//     target: { value },
+//   });
+//   expect(wrapper.state('createdAt')).toEqual(value);
+// });
