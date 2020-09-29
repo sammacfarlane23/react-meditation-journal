@@ -4,7 +4,11 @@ import { EntryItem } from '../../components/EntryItem';
 import entries from '../fixtures/entries';
 
 test('should render EntryItem correctly without title', () => {
-  const wrapper = shallow(<EntryItem {...entries[0]} />);
+  const startEditEntry = jest.fn();
+  const startRemoveEntry = jest.fn();
+  const wrapper = shallow(
+    <EntryItem {...entries[0]} startEditEntry={startEditEntry} />
+  );
   expect(wrapper).toMatchSnapshot();
 });
 

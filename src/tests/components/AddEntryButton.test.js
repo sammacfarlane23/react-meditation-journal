@@ -3,6 +3,9 @@ import { shallow } from 'enzyme';
 import { AddEntryButton } from '../../components/AddEntryButton';
 
 test('should render AddEntryButton correctly', () => {
-  const wrapper = shallow(<AddEntryButton />);
+  const startCreateEntry = jest.fn();
+  const wrapper = shallow(
+    <AddEntryButton startCreateEntry={startCreateEntry} />
+  );
   expect(wrapper).toMatchSnapshot();
 });

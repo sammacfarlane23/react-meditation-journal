@@ -90,10 +90,3 @@ export const startSetEntries = () => {
       });
   };
 };
-
-export const selectEntryForEdit = (entry) => {
-  return {
-    type: 'SELECT_ENTRY_FOR_EDIT',
-    entry,
-  };
-};

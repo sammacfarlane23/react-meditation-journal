@@ -21,7 +21,7 @@ export const startFacebookLogin = () => {
   };
 };
 
-export const logout = (params) => ({
+export const logout = () => ({
   type: 'LOGOUT',
 });
 

@@ -9,7 +9,7 @@ export const EntryModal = (props) => (
     isOpen={props.showModal}
     onRequestClose={props.closeModal}
     contentLabel='Entry View'
-    closeTimeoutMS={500}
+    closeTimeoutMS={300}
   >
     <EntryForm
       closeModal={props.closeModal}
