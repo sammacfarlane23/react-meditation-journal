@@ -6,7 +6,7 @@ import Header from '../components/Header';
 export const PrivateRoute = ({
   isAuthenticated,
   component: Component,
-  ...rest
+  ...rest // This is just a variable name for all the other props that weren't destructured
 }) => (
   <Route
     {...rest}

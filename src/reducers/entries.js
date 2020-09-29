@@ -19,8 +19,6 @@ export default (state = entriesReducerDefaultState, action) => {
       });
     case 'SET_ENTRIES':
       return action.entries;
-    case 'SELECT_ENTRY_FOR_EDIT':
-      return action.entry;
     default:
       return state;
   }
