@@ -10,13 +10,13 @@ import CrossIcon from './CrossIcon';
 
 export class Header extends React.Component {
   state = {
-    showSearchBar: false,
+    isSearchShown: false,
   };
 
   showHideSearch = () => {
     this.props.setTextFilter('');
     this.setState(() => ({
-      showSearchBar: !this.state.showSearchBar,
+      isSearchShown: !this.state.isSearchShown,
     }));
   };
 
@@ -33,7 +33,7 @@ export class Header extends React.Component {
 
     if (!domNode || !domNode.contains(e.target)) {
       this.props.setTextFilter('');
-      this.setState({ showSearchBar: false });
+      this.setState({ isSearchShown: false });
     }
   };
 
@@ -42,14 +42,14 @@ export class Header extends React.Component {
       <header className='header'>
         <div className='content-container'>
           <div className='header__content'>
-            {!this.state.showSearchBar && (
+            {!this.state.isSearchShown && (
               <h1 className='header__title'>JOURNAL</h1>
             )}
-            {this.state.showSearchBar && (
+            {this.state.isSearchShown && (
               <EntryListFilters tabIndex='0' onBlur={this.showHideSearch} />
             )}
             <div className='header__right'>
-              {this.state.showSearchBar ? (
+              {this.state.isSearchShown ? (
                 <CrossIcon showSearch={this.showHideSearch} />
               ) : (
                 <SearchIcon showSearch={this.showHideSearch} />
