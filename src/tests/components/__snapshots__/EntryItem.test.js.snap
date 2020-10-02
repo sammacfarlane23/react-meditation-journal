@@ -25,7 +25,7 @@ exports[`should render EntryItem correctly with title 1`] = `
     </div>
   </button>
   <Connect(EntryModal)
-    canEdit={true}
+    canDelete={true}
     closeModal={[Function]}
     onRemove={[Function]}
     onSubmit={[Function]}
@@ -54,7 +54,7 @@ exports[`should render EntryItem correctly without title 1`] = `
     </div>
   </button>
   <Connect(EntryModal)
-    canEdit={true}
+    canDelete={true}
     closeModal={[Function]}
     onRemove={[Function]}
     onSubmit={[Function]}

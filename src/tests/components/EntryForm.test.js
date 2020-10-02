@@ -10,7 +10,7 @@ test('should render EntryForm correctly', () => {
 });
 
 test('should render EntryForm correctly with entry data and delete button', () => {
-  const wrapper = shallow(<EntryForm entry={entries[2]} canEdit={true} />);
+  const wrapper = shallow(<EntryForm entry={entries[2]} canDelete={true} />);
   expect(wrapper).toMatchSnapshot();
 });
 

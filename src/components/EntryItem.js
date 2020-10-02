@@ -1,58 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 import moment from 'moment';
 import { connect } from 'react-redux';
 import EntryModal from './EntryModal';
 import { startEditEntry, startRemoveEntry } from '../actions/entries';
 
-export class EntryItem extends React.Component {
-  state = {
-    show: false,
-    canEdit: true,
+export const EntryItem = (props) => {
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = () => {
+    setShowModal(true);
   };
 
-  showModal = () => {
-    this.setState(() => ({ show: true }));
+  const onRemove = () => {
+    props.startRemoveEntry({ id: props.entry.id });
+    closeModal();
   };
 
-  onRemove = () => {
-    this.props.startRemoveEntry({ id: this.props.entry.id });
-    this.setState({ show: false });
+  const onSubmit = (entry) => {
+    props.startEditEntry(props.entry.id, entry);
+    closeModal();
   };
 
-  onSubmit = (entry) => {
-    this.props.startEditEntry(this.props.entry.id, entry);
-    this.setState({ show: false });
+  const closeModal = () => {
+    setShowModal(false);
   };
 
-  closeModal = () => {
-    this.setState({ show: false });
-  };
-  render() {
-    return (
-      <div>
-        <button className='entry-item' onClick={this.showModal}>
-          <div>
-            <h1 className='entry-item__date'>
-              {moment(this.props.createdAt).format('DD MMM YYYY HH:mm')}
-            </h1>
-          </div>
-          {this.props.title && (
-            <h1 className='entry-item__title'>{this.props.title}</h1>
-          )}
-          <div className='entry-item__text'>{this.props.entryText}</div>
-        </button>
-        <EntryModal
-          showModal={this.state.show}
-          selectedEntry={this.props.entry}
-          onSubmit={this.onSubmit}
-          closeModal={this.closeModal}
-          canEdit={this.state.canEdit}
-          onRemove={this.onRemove}
-        />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <button className='entry-item' onClick={openModal}>
+        <div>
+          <h1 className='entry-item__date'>
+            {moment(props.createdAt).format('DD MMM YYYY HH:mm')}
+          </h1>
+        </div>
+        {props.title && <h1 className='entry-item__title'>{props.title}</h1>}
+        <div className='entry-item__text'>{props.entryText}</div>
+      </button>
+      <EntryModal
+        showModal={showModal}
+        selectedEntry={props.entry}
+        onSubmit={onSubmit}
+        closeModal={closeModal}
+        canDelete={true}
+        onRemove={onRemove}
+      />
+    </div>
+  );
+};
 
 const mapStateToProps = (state, props) => {
   return {

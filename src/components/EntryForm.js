@@ -134,7 +134,7 @@ export default (props) => {
       )}
       <div className='button-container'>
         <div className='remove-button-container'>
-          {props.canEdit && (
+          {props.canDelete && (
             <button
               type='button'
               className='button button--delete'

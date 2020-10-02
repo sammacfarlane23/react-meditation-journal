@@ -15,7 +15,7 @@ export const EntryModal = (props) => (
       closeModal={props.closeModal}
       entry={props.selectedEntry}
       onSubmit={props.onSubmit}
-      canEdit={props.canEdit}
+      canDelete={props.canDelete}
       onRemove={props.onRemove}
     />
   </ReactModal>
