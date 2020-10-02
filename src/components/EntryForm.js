@@ -1,171 +1,162 @@
-import React from 'react';
+import React, { useState } from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
 import EditButton from './EditButton';
 
-export default class EntryForm extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      entryText: props.entry ? props.entry.entryText : '',
-      createdAt: props.entry ? moment(props.entry.createdAt) : moment(),
-      error: '',
-      calendarFocused: false,
-      title: props.entry ? props.entry.title : '',
-      editDate: false,
-    };
-  }
+export default (props) => {
+  const [title, setTitle] = useState(props.entry ? props.entry.title : '');
 
-  onEntryTextChange = (e) => {
-    const entryText = e.target.value;
-    this.setState(() => ({ entryText }));
+  const [entryText, setEntryText] = useState(
+    props.entry ? props.entry.entryText : ''
+  );
+
+  const [createdAt, setCreatedAt] = useState(
+    props.entry ? moment(props.entry.createdAt) : moment()
+  );
+
+  const [editDate, setEditDate] = useState(false);
+
+  const [calendarFocused, setCalendarFocused] = useState(false);
+
+  const [error, setError] = useState('');
+
+  const onEntryTextChange = (e) => {
+    setEntryText(e.target.value);
   };
 
-  onRemove = () => {
-    this.props.onRemove(this.props.entry);
+  const onRemove = () => {
+    props.onRemove(props.entry);
   };
 
-  onTitleChange = (e) => {
-    const title = e.target.value;
-    this.setState(() => ({ title }));
+  const onTitleChange = (e) => {
+    setTitle(e.target.value);
   };
 
-  onTimeChange = (e) => {
-    const currentDate = moment(this.state.createdAt).startOf('day');
+  const onTimeChange = (e) => {
+    const currentDate = moment(createdAt).startOf('day');
     const timeOfDay = moment.duration(
       moment(e.target.value, 'HH:mm') -
         moment(e.target.value, 'HH:mm').startOf('day')
     );
-    const createdAt = moment(currentDate).add(timeOfDay);
-    this.setState(() => ({ createdAt }));
+    setCreatedAt(moment(currentDate).add(timeOfDay));
   };
 
-  onFocusChange = ({ focused }) => {
-    this.setState(() => ({ calendarFocused: focused }));
+  const onFocusChange = ({ focused }) => {
+    setCalendarFocused(focused);
   };
 
-  onDateChange = (createdAt) => {
-    const timeOfDay =
-      moment(this.state.createdAt) -
-      moment(this.state.createdAt).startOf('day');
+  const onDateChange = (createdAt) => {
+    const timeOfDay = moment(createdAt) - moment(createdAt).startOf('day');
     const addTime = moment(moment(createdAt).startOf('day') + timeOfDay);
     if (createdAt) {
-      this.setState(() => ({ createdAt: addTime }));
+      setCreatedAt(addTime);
     }
   };
 
-  onEditDate = () => {
-    this.setState(() => ({ editDate: true }));
+  const onEditDate = () => {
+    setEditDate(true);
   };
 
-  closeModal = () => {
-    this.props.closeModal();
+  const closeModal = () => {
+    props.closeModal();
   };
 
-  onSubmit = (e) => {
+  const onSubmit = (e) => {
     e.preventDefault();
 
-    if (!this.state.entryText) {
-      this.setState(() => ({
-        error: 'Please add an entry',
-      }));
+    if (!entryText) {
+      setError('Please add an entry');
     } else {
-      this.setState(() => ({ error: '' }));
-      this.props.onSubmit({
-        entryText: this.state.entryText,
-        createdAt: this.state.createdAt.valueOf(),
-        title: this.state.title,
+      setError('');
+      props.onSubmit({
+        entryText,
+        createdAt: createdAt.valueOf(),
+        title,
       });
     }
   };
 
-  render() {
-    return (
-      <form className='form' onSubmit={this.onSubmit}>
-        <input
-          className='title'
-          type='text'
-          placeholder='Title (optional)'
-          value={this.state.title ? this.state.title : ''}
-          onChange={this.onTitleChange}
-        />
-        <hr className='horizontal-line' />
-        {this.state.error && <p className='form__error'>{this.state.error}</p>}
-        <textarea
-          rows='10'
-          value={this.state.entryText}
-          className='text-area'
-          placeholder='Describe your experience here...'
-          onChange={this.onEntryTextChange}
-        ></textarea>
-        {!this.state.editDate && (
-          <div className='createdAt-section'>
-            <p className='createdAt-section__text'>
-              {moment(this.state.createdAt).format('DD MMM YYYY HH:mm')}
-            </p>
-            <button
-              type='button'
-              className='edit-button'
-              onClick={this.onEditDate}
-            >
-              <EditButton />
-            </button>
-          </div>
-        )}
-        {this.state.editDate && (
-          <div className='date-edit'>
-            <div className='single-date-picker'>
-              <SingleDatePicker
-                date={this.state.createdAt}
-                onDateChange={this.onDateChange}
-                onFocusChange={this.onFocusChange}
-                focused={this.state.calendarFocused}
-                numberOfMonths={1}
-                isOutsideRange={() => false}
-                displayFormat='DD/MM/YYYY'
-                isOutsideRange={(d) => d.isAfter(moment())}
-                withPortal={true}
-              />
-            </div>
-            <input
-              className='input-time'
-              type='time'
-              onChange={this.onTimeChange}
-              value={moment(this.state.createdAt).format('HH:mm')}
-              max={
-                moment()
-                  .startOf('day')
-                  .isSame(moment(this.state.createdAt).startOf('day'))
-                  ? moment().format('HH:mm')
-                  : '23:59'
-              }
+  return (
+    <form className='form' onSubmit={onSubmit}>
+      <input
+        className='title'
+        type='text'
+        placeholder='Title (optional)'
+        value={title ? title : ''}
+        onChange={onTitleChange}
+      />
+      <hr className='horizontal-line' />
+      {error && <p className='form__error'>{error}</p>}
+      <textarea
+        rows='10'
+        value={entryText}
+        className='text-area'
+        placeholder='Describe your experience here...'
+        onChange={onEntryTextChange}
+      ></textarea>
+      {!editDate && (
+        <div className='createdAt-section'>
+          <p className='createdAt-section__text'>
+            {moment(createdAt).format('DD MMM YYYY HH:mm')}
+          </p>
+          <button type='button' className='edit-button' onClick={onEditDate}>
+            <EditButton />
+          </button>
+        </div>
+      )}
+      {editDate && (
+        <div className='date-edit'>
+          <div className='single-date-picker'>
+            <SingleDatePicker
+              date={createdAt}
+              onDateChange={onDateChange}
+              onFocusChange={onFocusChange}
+              focused={calendarFocused}
+              numberOfMonths={1}
+              isOutsideRange={() => false}
+              displayFormat='DD/MM/YYYY'
+              isOutsideRange={(d) => d.isAfter(moment())}
+              withPortal={true}
             />
           </div>
-        )}
-        <div className='button-container'>
-          <div className='remove-button-container'>
-            {this.props.canEdit && (
-              <button
-                type='button'
-                className='button button--delete'
-                onClick={this.onRemove}
-              >
-                Delete
-              </button>
-            )}
-          </div>
-          <div className='other-button-container'>
-            <button className='button button--right'>Save</button>
+          <input
+            className='input-time'
+            type='time'
+            onChange={onTimeChange}
+            value={moment(createdAt).format('HH:mm')}
+            max={
+              moment().startOf('day').isSame(moment(createdAt).startOf('day'))
+                ? moment().format('HH:mm')
+                : '23:59'
+            }
+          />
+        </div>
+      )}
+      <div className='button-container'>
+        <div className='remove-button-container'>
+          {props.canEdit && (
             <button
               type='button'
-              onClick={this.closeModal}
-              className='button button--right button--cancel'
+              className='button button--delete'
+              onClick={onRemove}
             >
-              Cancel
+              Delete
             </button>
-          </div>
+          )}
         </div>
-      </form>
-    );
-  }
-}
+        <div className='other-button-container'>
+          <button type='submit' className='button button--right'>
+            Save
+          </button>
+          <button
+            type='button'
+            onClick={closeModal}
+            className='button button--right button--cancel'
+          >
+            Cancel
+          </button>
+        </div>
+      </div>
+    </form>
+  );
+};

@@ -13,6 +13,6 @@ exports[`should render EntryModal correctly 1`] = `
   shouldCloseOnOverlayClick={true}
   shouldFocusAfterRender={true}
 >
-  <EntryForm />
+  <Component />
 </Modal>
 `;
