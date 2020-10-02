@@ -3,23 +3,25 @@ import ReactModal from 'react-modal';
 import { connect } from 'react-redux';
 import EntryForm from './EntryForm';
 
-export const EntryModal = (props) => (
-  <ReactModal
-    className='modal'
-    isOpen={props.showModal}
-    onRequestClose={props.closeModal}
-    contentLabel='Entry View'
-    closeTimeoutMS={300}
-  >
-    <EntryForm
-      closeModal={props.closeModal}
-      entry={props.selectedEntry}
-      onSubmit={props.onSubmit}
-      canDelete={props.canDelete}
-      onRemove={props.onRemove}
-    />
-  </ReactModal>
-);
+export const EntryModal = (props) => {
+  return (
+    <ReactModal
+      className='modal'
+      isOpen={props.showModal}
+      onRequestClose={props.closeModal}
+      contentLabel='Entry View'
+      closeTimeoutMS={300}
+    >
+      <EntryForm
+        closeModal={props.closeModal}
+        entry={props.selectedEntry}
+        onSubmit={props.onSubmit}
+        canDelete={props.canDelete}
+        onRemove={props.onRemove}
+      />
+    </ReactModal>
+  );
+};
 
 const mapStateToProps = (state, props) => {
   return {

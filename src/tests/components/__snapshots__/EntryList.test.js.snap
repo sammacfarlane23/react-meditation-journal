@@ -4,21 +4,21 @@ exports[`should render EntryList with entries 1`] = `
 <div
   className="entry-list"
 >
-  <Connect(EntryItem)
+  <[object Object]
     createdAt={0}
     entryText="This is an entry"
     id="1"
     key="1"
     title=""
   />
-  <Connect(EntryItem)
+  <[object Object]
     createdAt={-1000}
     entryText="This is another entry"
     id="2"
     key="2"
     title="title"
   />
-  <Connect(EntryItem)
+  <[object Object]
     createdAt={1600000000000}
     entryText="This is third entry"
     id="3"

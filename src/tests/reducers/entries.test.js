@@ -77,13 +77,3 @@ test('should set entries', () => {
   const state = entriesReducer(entries, action);
   expect(state).toEqual(entries);
 });
-
-test('should select entry for edit', () => {
-  const entry = entries[0];
-  const action = {
-    type: 'SELECT_ENTRY_FOR_EDIT',
-    entry,
-  };
-  const state = entriesReducer(entries, action);
-  expect(state).toEqual(entry);
-});

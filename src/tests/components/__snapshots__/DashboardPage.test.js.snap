@@ -7,8 +7,8 @@ exports[`should render dashboard page correctly 1`] = `
   <div
     className="content-container"
   >
-    <Connect(EntryList) />
+    <[object Object] />
   </div>
-  <Connect(AddEntryButton) />
+  <[object Object] />
 </div>
 `;

@@ -6,6 +6,7 @@ import { startEditEntry, startRemoveEntry } from '../actions/entries';
 
 export const EntryItem = (props) => {
   const [showModal, setShowModal] = useState(false);
+  const [canDelete] = useState(true);
 
   const openModal = () => {
     setShowModal(true);
@@ -41,7 +42,7 @@ export const EntryItem = (props) => {
         selectedEntry={props.entry}
         onSubmit={onSubmit}
         closeModal={closeModal}
-        canDelete={true}
+        canDelete={canDelete}
         onRemove={onRemove}
       />
     </div>

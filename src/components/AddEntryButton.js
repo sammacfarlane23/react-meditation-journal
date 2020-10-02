@@ -1,35 +1,36 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import EntryModal from './EntryModal';
 import { startCreateEntry } from '../actions/entries';
 
 export const AddEntryButton = (props) => {
-  const [show, setShow] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const dispatch = useDispatch();
 
   const showModal = () => {
-    setShow(true);
+    setIsModalOpen(true);
   };
 
   const onSubmit = (entry) => {
-    props.startCreateEntry(entry);
-    setShow(false);
+    dispatch(startCreateEntry(entry));
+    setIsModalOpen(false);
   };
 
   const closeModal = () => {
-    setShow(false);
+    setIsModalOpen(false);
   };
 
   return (
     <div className='button-position'>
-      {!show && (
+      {!isModalOpen && (
         <button className='button--big circular-container' onClick={showModal}>
           <FontAwesomeIcon icon={faPlus} size='2x' />
         </button>
       )}
       <EntryModal
-        showModal={show}
+        showModal={isModalOpen}
         onSubmit={onSubmit}
         closeModal={closeModal}
       />
@@ -37,8 +38,4 @@ export const AddEntryButton = (props) => {
   );
 };
 
-const mapDispatchToProps = (dispatch) => ({
-  startCreateEntry: (entry) => dispatch(startCreateEntry(entry)),
-});
-
-export default connect(undefined, mapDispatchToProps)(AddEntryButton);
+export default AddEntryButton;
