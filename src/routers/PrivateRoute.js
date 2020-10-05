@@ -1,30 +1,25 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
 import Header from '../components/Header';
 
-export const PrivateRoute = ({
-  isAuthenticated,
-  component: Component,
-  ...rest // This is just a variable name for all the other props that weren't destructured
-}) => (
-  <Route
-    {...rest}
-    component={(props) =>
-      isAuthenticated ? (
-        <div>
-          <Header />
-          <Component {...props} />
-        </div>
-      ) : (
-        <Redirect to='/' />
-      )
-    }
-  />
-);
+export default ({ component: Component, ...rest }) => {
+  // rest is just a variable name for all the other props that weren't destructured
+  const isAuthenticated = useSelector((state) => !!state.auth.uid);
 
-const mapStateToProps = (state) => ({
-  isAuthenticated: !!state.auth.uid,
-});
-
-export default connect(mapStateToProps)(PrivateRoute);
+  return (
+    <Route
+      {...rest}
+      component={(props) =>
+        isAuthenticated ? (
+          <div>
+            <Header />
+            <Component {...props} />
+          </div>
+        ) : (
+          <Redirect to='/' />
+        )
+      }
+    />
+  );
+};
