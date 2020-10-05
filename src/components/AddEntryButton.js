@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { connect, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import EntryModal from './EntryModal';
 import { startCreateEntry } from '../actions/entries';
 
-export const AddEntryButton = (props) => {
+export default () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch = useDispatch();
 
@@ -37,5 +37,3 @@ export const AddEntryButton = (props) => {
     </div>
   );
 };
-
-export default AddEntryButton;

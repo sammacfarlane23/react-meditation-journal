@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactModal from 'react-modal';
-import { connect } from 'react-redux';
 import EntryForm from './EntryForm';
 
-export const EntryModal = (props) => {
+export default (props) => {
   return (
     <ReactModal
       className='modal'
@@ -22,11 +21,3 @@ export const EntryModal = (props) => {
     </ReactModal>
   );
 };
-
-const mapStateToProps = (state, props) => {
-  return {
-    entry: state.entries.find((entry) => entry.id === props.id),
-  };
-};
-
-export default connect(mapStateToProps)(EntryModal);

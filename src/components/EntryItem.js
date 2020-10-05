@@ -1,24 +1,30 @@
 import React, { useState } from 'react';
 import moment from 'moment';
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import EntryModal from './EntryModal';
 import { startEditEntry, startRemoveEntry } from '../actions/entries';
 
-export const EntryItem = (props) => {
+// Should probably just switch this over to using the props given by EntryList
+export default (props) => {
   const [showModal, setShowModal] = useState(false);
-  const [canDelete] = useState(true);
+
+  const dispatch = useDispatch();
+
+  const entryItem = useSelector((state) =>
+    state.entries.find((entry) => entry.id === props.id)
+  );
 
   const openModal = () => {
     setShowModal(true);
   };
 
   const onRemove = () => {
-    props.startRemoveEntry({ id: props.entry.id });
+    dispatch(startRemoveEntry({ id: entryItem.id }));
     closeModal();
   };
 
   const onSubmit = (entry) => {
-    props.startEditEntry(props.entry.id, entry);
+    dispatch(startEditEntry(entryItem.id, entry));
     closeModal();
   };
 
@@ -31,33 +37,22 @@ export const EntryItem = (props) => {
       <button className='entry-item' onClick={openModal}>
         <div>
           <h1 className='entry-item__date'>
-            {moment(props.createdAt).format('DD MMM YYYY HH:mm')}
+            {moment(entryItem.createdAt).format('DD MMM YYYY HH:mm')}
           </h1>
         </div>
-        {props.title && <h1 className='entry-item__title'>{props.title}</h1>}
-        <div className='entry-item__text'>{props.entryText}</div>
+        {entryItem.title && (
+          <h1 className='entry-item__title'>{entryItem.title}</h1>
+        )}
+        <div className='entry-item__text'>{entryItem.entryText}</div>
       </button>
       <EntryModal
         showModal={showModal}
-        selectedEntry={props.entry}
+        selectedEntry={entryItem}
         onSubmit={onSubmit}
         closeModal={closeModal}
-        canDelete={canDelete}
+        canDelete={true}
         onRemove={onRemove}
       />
     </div>
   );
 };
-
-const mapStateToProps = (state, props) => {
-  return {
-    entry: state.entries.find((entry) => entry.id === props.id),
-  };
-};
-
-const mapDispatchToProps = (dispatch) => ({
-  startEditEntry: (id, entry) => dispatch(startEditEntry(id, entry)),
-  startRemoveEntry: (entry) => dispatch(startRemoveEntry(entry)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(EntryItem);

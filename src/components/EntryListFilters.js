@@ -1,10 +1,13 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setTextFilter } from '../actions/filters';
 
-export const EntryListFilters = (props) => {
+export default () => {
+  const dispatch = useDispatch();
+  const filters = useSelector((state) => state.filters);
+
   const onTextChange = (e) => {
-    props.setTextFilter(e.target.value);
+    dispatch(setTextFilter(e.target.value));
   };
 
   return (
@@ -13,20 +16,10 @@ export const EntryListFilters = (props) => {
         type='text'
         autoFocus
         placeholder='Search entries'
-        value={props.filters.text}
+        value={filters.text}
         onChange={onTextChange}
         className='search-bar'
       ></input>
     </div>
   );
 };
-
-const mapStateToProps = (state) => ({
-  filters: state.filters,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  setTextFilter: (text) => dispatch(setTextFilter(text)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(EntryListFilters);
