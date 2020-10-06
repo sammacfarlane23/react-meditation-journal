@@ -1,12 +1,26 @@
 import React from 'react';
+import { Provider } from 'react-redux';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import configureStore from 'redux-mock-store';
 import { shallow } from 'enzyme';
 import moment from 'moment';
 import EntryForm from '../../components/EntryForm';
 import entries from '../fixtures/entries';
 
+const mockStore = configureStore([]);
+
+let store;
+
+beforeEach(() => {
+  store = mockStore();
+});
+
+const Wrapper = ({ children }) => <Provider store={store}>{children}</Provider>;
+
 test('should render EntryForm correctly', () => {
-  const wrapper = shallow(<EntryForm />);
-  expect(wrapper).toMatchSnapshot();
+  const component = render(<EntryForm />, { wrapper: Wrapper });
+  expect(component).toMatchSnapshot();
 });
 
 test('should render EntryForm correctly with entry data and delete button', () => {

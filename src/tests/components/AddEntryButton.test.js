@@ -1,11 +1,12 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { AddEntryButton } from '../../components/AddEntryButton';
+import { screen, fireEvent } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { renderWithStore } from '../store/mockStore';
+import AddEntryButton from '../../components/AddEntryButton';
 
-test('should render AddEntryButton correctly', () => {
-  const startCreateEntry = jest.fn();
-  const wrapper = shallow(
-    <AddEntryButton startCreateEntry={startCreateEntry} />
-  );
-  expect(wrapper).toMatchSnapshot();
+test('should render AddEntryButton correctly with isModalOpen false', () => {
+  const component = renderWithStore(<AddEntryButton />);
+  expect(component).toMatchSnapshot();
 });
+
+test('Clicking the button should set isModalOpen to true', () => {});
