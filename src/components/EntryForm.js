@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import moment from 'moment';
 import { SingleDatePicker } from 'react-dates';
-import EditButton from './EditButton';
+import IconComponent from './IconComponent';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 export default (props) => {
   const [title, setTitle] = useState(props.entry ? props.entry.title : '');
@@ -100,7 +101,7 @@ export default (props) => {
             {moment(createdAt).format('DD MMM YYYY HH:mm')}
           </p>
           <button type='button' className='edit-button' onClick={onEditDate}>
-            <EditButton />
+            <IconComponent icon={faEdit} class={'edit-icon'} />
           </button>
         </div>
       )}

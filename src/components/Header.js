@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { connect } from 'react-redux';
-import SearchIcon from './SearchIcon';
+import {
+  faSearch,
+  faSignOutAlt,
+  faTimes,
+} from '@fortawesome/free-solid-svg-icons';
 import EntryListFilters from './EntryListFilters';
 import { startLogout } from '../actions/auth';
 import { setTextFilter } from '../actions/filters';
-import LogoutIcon from './LogoutIcon';
-import CrossIcon from './CrossIcon';
+import IconComponent from './IconComponent';
 
 export class Header extends React.Component {
   state = {
@@ -49,12 +52,16 @@ export class Header extends React.Component {
               <EntryListFilters tabIndex='0' onBlur={this.showHideSearch} />
             )}
             <div className='header__right'>
-              {this.state.isSearchShown ? (
-                <CrossIcon showSearch={this.showHideSearch} />
-              ) : (
-                <SearchIcon showSearch={this.showHideSearch} />
-              )}
-              <LogoutIcon startLogout={this.props.startLogout} />
+              <button className='button--big' onClick={this.showHideSearch}>
+                {this.state.isSearchShown ? (
+                  <IconComponent icon={faTimes} size='2x' />
+                ) : (
+                  <IconComponent icon={faSearch} size='2x' />
+                )}
+              </button>
+              <button className='button--big' onClick={this.props.startLogout}>
+                <IconComponent icon={faSignOutAlt} size='2x' />
+              </button>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import IconComponent from './IconComponent';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import EntryModal from './EntryModal';
 import { startCreateEntry } from '../actions/entries';
@@ -26,7 +26,7 @@ export default () => {
     <div className='button-position'>
       {!isModalOpen && (
         <button className='button--big circular-container' onClick={showModal}>
-          <FontAwesomeIcon icon={faPlus} size='2x' />
+          <IconComponent icon={faPlus} size={'2x'} />
         </button>
       )}
       <EntryModal
