@@ -1,8 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import DashboardPage from '../../components/DashboardPage';
+import { renderWithState } from '../store/mockStore';
 
 test('should render dashboard page correctly', () => {
-  const wrapper = shallow(<DashboardPage />);
-  expect(wrapper).toMatchSnapshot();
+  const component = renderWithState(<DashboardPage />);
+  expect(component).toMatchSnapshot();
 });

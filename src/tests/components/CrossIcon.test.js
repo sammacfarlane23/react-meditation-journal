@@ -1,8 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import CrossIcon from '../../components/CrossIcon';
+import { render } from '@testing-library/react';
 
 test('should render CrossIcon correctly', () => {
-  const wrapper = shallow(<CrossIcon />);
-  expect(wrapper).toMatchSnapshot();
+  const component = render(<CrossIcon />);
+  expect(component).toMatchSnapshot();
 });

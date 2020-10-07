@@ -1,8 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import LogoutIcon from '../../components/LogoutIcon';
+import { render } from '@testing-library/react';
 
 test('should render LogoutIcon correctly', () => {
-  const wrapper = shallow(<LogoutIcon />);
-  expect(wrapper).toMatchSnapshot();
+  const component = render(<LogoutIcon />);
+  expect(component).toMatchSnapshot();
 });

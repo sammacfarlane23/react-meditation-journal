@@ -1,6 +1,4 @@
 import React from 'react';
-import { screen, fireEvent } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import { renderWithState } from '../store/mockStore';
 import AddEntryButton from '../../components/AddEntryButton';
 

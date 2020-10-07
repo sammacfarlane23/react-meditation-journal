@@ -1,12 +1,5 @@
 import React from 'react';
-import { Provider } from 'react-redux';
-import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
-import configureStore from 'redux-mock-store';
-import { shallow } from 'enzyme';
-import moment from 'moment';
 import EntryForm from '../../components/EntryForm';
-import entries from '../fixtures/entries';
 import { renderWithState } from '../store/mockStore';
 
 test('should render EntryForm correctly', () => {

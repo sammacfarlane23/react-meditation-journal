@@ -1,8 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
 import EditButton from '../../components/EditButton';
+import { render } from '@testing-library/react';
 
 test('should render EditButton correctly', () => {
-  const wrapper = shallow(<EditButton />);
-  expect(wrapper).toMatchSnapshot();
+  const component = render(<EditButton />);
+  expect(component).toMatchSnapshot();
 });
