@@ -56,6 +56,7 @@
     "yarn": "^1.22.4"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
     "cross-env": "5.0.5",
     "dotenv": "4.0.0",
     "enzyme": "3.0.0",

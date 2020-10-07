@@ -6,17 +6,19 @@ import { render as rtlRender } from '@testing-library/react';
 const middlewares = [];
 const mockStore = configureStore(middlewares);
 
-let store;
+const defaultInitialState = {
+  entries: [],
+  filters: {
+    text: '',
+  },
+};
 
-beforeEach(() => {
-  store = mockStore();
-});
-
-function renderWithStoreProvider(ui) {
-  const Wrapper = ({ children }) => (
-    <Provider store={store}>{children}</Provider>
-  );
+function renderWithState(ui, initialState = defaultInitialState) {
+  const Wrapper = ({ children }) => {
+    const store = mockStore(initialState);
+    return <Provider store={store}>{children}</Provider>;
+  };
   return rtlRender(ui, { wrapper: Wrapper });
 }
 
-export { renderWithStoreProvider };
+export { renderWithState };

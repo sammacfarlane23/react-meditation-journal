@@ -7,10 +7,10 @@ import { shallow } from 'enzyme';
 import moment from 'moment';
 import EntryForm from '../../components/EntryForm';
 import entries from '../fixtures/entries';
-import { renderWithStoreProvider } from '../store/mockStore';
+import { renderWithState } from '../store/mockStore';
 
 test('should render EntryForm correctly', () => {
-  const component = renderWithStoreProvider(<EntryForm />);
+  const component = renderWithState(<EntryForm />);
   expect(component).toMatchSnapshot();
 });
 
