@@ -31,12 +31,14 @@ export default ({ id, title, entryText, createdAt }) => {
     <div>
       <button className='entry-item' onClick={openModal}>
         <div>
-          <h1 className='entry-item__date'>
+          <h2 className='entry-item__date'>
             {moment(createdAt).format('DD MMM YYYY HH:mm')}
-          </h1>
+          </h2>
         </div>
         {title && <h1 className='entry-item__title'>{title}</h1>}
-        <div className='entry-item__text'>{entryText}</div>
+        <div className='entry-item__text'>
+          <p>{entryText}</p>
+        </div>
       </button>
       <EntryModal
         showModal={showModal}
