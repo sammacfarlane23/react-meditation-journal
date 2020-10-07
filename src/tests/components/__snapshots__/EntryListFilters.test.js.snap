@@ -1,27 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render loading page correctly 1`] = `
+exports[`should render EntryListFilters correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
-        <div
-            class="loader"
-        >
-            <img
-                class="loader__image"
-                src="/images/loader.gif"
+        <div>
+            <input
+                type="text"
+                placeholder="Search entries"
+                class="search-bar"
+                value=""
             />
         </div>
     </div>
 </body>,
   "container": <div>
-    <div
-        class="loader"
-    >
-        <img
-            class="loader__image"
-            src="/images/loader.gif"
+    <div>
+        <input
+            type="text"
+            placeholder="Search entries"
+            class="search-bar"
+            value=""
         />
     </div>
 </div>,

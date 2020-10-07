@@ -1,28 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render loading page correctly 1`] = `
+exports[`should render login page correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
         <div
-            class="loader"
+            class="box-layout"
         >
-            <img
-                class="loader__image"
-                src="/images/loader.gif"
-            />
+            <div
+                class="box-layout__box"
+            >
+                <h1
+                    class="box-layout__title"
+                >
+                    Meditation Journal
+                </h1>
+                <p>
+                    A simple app to journal your experience of meditation
+                </p>
+                <div
+                    class="login-button-container"
+                >
+                    <button
+                        class="button button--login-google"
+                    >
+                        Login with Google
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </body>,
   "container": <div>
     <div
-        class="loader"
+        class="box-layout"
     >
-        <img
-            class="loader__image"
-            src="/images/loader.gif"
-        />
+        <div
+            class="box-layout__box"
+        >
+            <h1
+                class="box-layout__title"
+            >
+                Meditation Journal
+            </h1>
+            <p>
+                A simple app to journal your experience of meditation
+            </p>
+            <div
+                class="login-button-container"
+            >
+                <button
+                    class="button button--login-google"
+                >
+                    Login with Google
+                </button>
+            </div>
+        </div>
     </div>
 </div>,
   "debug": [Function],

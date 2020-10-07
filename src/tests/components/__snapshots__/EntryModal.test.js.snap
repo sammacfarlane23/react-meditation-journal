@@ -1,30 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should render loading page correctly 1`] = `
+exports[`should render EntryModal correctly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
-    <div>
-        <div
-            class="loader"
-        >
-            <img
-                class="loader__image"
-                src="/images/loader.gif"
-            />
-        </div>
-    </div>
-</body>,
-  "container": <div>
+    <div />
     <div
-        class="loader"
-    >
-        <img
-            class="loader__image"
-            src="/images/loader.gif"
-        />
-    </div>
-</div>,
+        class="ReactModalPortal"
+    />
+</body>,
+  "container": <div />,
   "debug": [Function],
   "findAllByAltText": [Function],
   "findAllByDisplayValue": [Function],

@@ -1,9 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import { EntryListFilters } from '../../components/EntryListFilters';
+import EntryListFilters from '../../components/EntryListFilters';
+import { renderWithState } from '../store/mockStore';
 
 test('should render EntryListFilters correctly', () => {
-  const text = '';
-  const wrapper = shallow(<EntryListFilters filters={{ text }} />);
-  expect(wrapper).toMatchSnapshot();
+  const component = renderWithState(<EntryListFilters />);
+  expect(component).toMatchSnapshot();
 });

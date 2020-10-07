@@ -16,6 +16,7 @@ const defaultInitialState = {
 function renderWithState(ui, initialState = defaultInitialState) {
   const Wrapper = ({ children }) => {
     const store = mockStore(initialState);
+    store.dispatch = jest.fn();
     return <Provider store={store}>{children}</Provider>;
   };
   return rtlRender(ui, { wrapper: Wrapper });

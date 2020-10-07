@@ -1,8 +1,8 @@
+import { render } from '@testing-library/react';
 import React from 'react';
-import { shallow } from 'enzyme';
-import { EntryModal } from '../../components/EntryModal';
+import EntryModal from '../../components/EntryModal';
 
 test('should render EntryModal correctly', () => {
-  const wrapper = shallow(<EntryModal />);
-  expect(wrapper).toMatchSnapshot();
+  const component = render(<EntryModal />);
+  expect(component).toMatchSnapshot();
 });
