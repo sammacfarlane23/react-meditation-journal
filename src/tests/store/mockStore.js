@@ -2,6 +2,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
 import { render as rtlRender } from '@testing-library/react';
+import { mount } from 'enzyme';
 
 const middlewares = [];
 const mockStore = configureStore(middlewares);
@@ -13,7 +14,7 @@ const defaultInitialState = {
   },
 };
 
-function renderWithState(ui, initialState = defaultInitialState) {
+function renderWithReduxState(ui, initialState = defaultInitialState) {
   const Wrapper = ({ children }) => {
     const store = mockStore(initialState);
     store.dispatch = jest.fn();
@@ -22,4 +23,10 @@ function renderWithState(ui, initialState = defaultInitialState) {
   return rtlRender(ui, { wrapper: Wrapper });
 }
 
-export { renderWithState };
+function mountWithReduxState(component, initialState = defaultInitialState) {
+  const store = mockStore(initialState);
+  store.dispatch = jest.fn();
+  return mount(<Provider store={store}>{component}</Provider>);
+}
+
+export { renderWithReduxState, mountWithReduxState };

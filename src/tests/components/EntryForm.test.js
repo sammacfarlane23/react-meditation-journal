@@ -1,9 +1,9 @@
 import React from 'react';
 import EntryForm from '../../components/EntryForm';
-import { renderWithState } from '../store/mockStore';
+import { renderWithReduxState } from '../store/mockStore';
 
 test('should render EntryForm correctly', () => {
-  const component = renderWithState(<EntryForm />);
+  const component = renderWithReduxState(<EntryForm />);
   expect(component).toMatchSnapshot();
 });
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import LoginPage from '../../components/LoginPage';
-import { renderWithState } from '../store/mockStore';
+import { renderWithReduxState } from '../store/mockStore';
 
 test('should render login page correctly', () => {
-  const component = renderWithState(<LoginPage />);
+  const component = renderWithReduxState(<LoginPage />);
   expect(component).toMatchSnapshot();
 });

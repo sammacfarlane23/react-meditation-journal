@@ -3,7 +3,7 @@ import { screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import EntryList from '../../components/EntryList';
 import entries from '../fixtures/entries';
-import { renderWithState } from '../store/mockStore';
+import { renderWithReduxState } from '../store/mockStore';
 
 test('should render EntryList with entries', () => {
   const initialState = {
@@ -12,12 +12,12 @@ test('should render EntryList with entries', () => {
       text: '',
     },
   };
-  const component = renderWithState(<EntryList />, initialState);
+  const component = renderWithReduxState(<EntryList />, initialState);
   expect(component).toMatchSnapshot();
 });
 
 test('should render welcome message if no entries', () => {
-  renderWithState(<EntryList />);
+  renderWithReduxState(<EntryList />);
   expect(screen.getByText(/welcome/i)).toBeInTheDocument();
 });
 
@@ -28,6 +28,6 @@ test('should render no entries message if there are entries but none selected', 
       text: 'search query',
     },
   };
-  renderWithState(<EntryList />, initialState);
+  renderWithReduxState(<EntryList />, initialState);
   expect(screen.getByText(/no matching entries/i)).toBeInTheDocument();
 });
