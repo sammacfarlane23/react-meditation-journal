@@ -1,208 +1,171 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render EntryForm correctly 1`] = `
-Object {
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-        <form
-            class="form"
-        >
-            <input
-                class="title"
-                type="text"
-                placeholder="Title (optional)"
-                value=""
-            />
-            <hr
-                class="horizontal-line"
-            />
-            <textarea
-                rows="10"
-                class="text-area"
-                placeholder="Describe your experience here..."
-            />
-            <div
-                class="createdAt-section"
-            >
-                <p
-                    class="createdAt-section__text"
-                >
-                    01 Jan 1970 01:00
-                </p>
-                <button
-                    type="button"
-                    class="edit-button"
-                >
-                    <div>
-                        <svg
-                            aria-hidden="true"
-                            focusable="false"
-                            data-prefix="fas"
-                            data-icon="edit"
-                            class="svg-inline--fa fa-edit fa-w-18 edit-icon"
-                            role="img"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 576 512"
-                        >
-                            <path
-                                fill="currentColor"
-                                d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"
-                            />
-                        </svg>
-                    </div>
-                </button>
-            </div>
-            <div
-                class="button-container"
-            >
-                <div
-                    class="remove-button-container"
-                />
-                <div
-                    class="other-button-container"
-                >
-                    <button
-                        type="submit"
-                        class="button button--right"
-                    >
-                        Save
-                    </button>
-                    <button
-                        type="button"
-                        class="button button--right button--cancel"
-                    >
-                        Cancel
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
-</body>,
-  "container": <div>
-    <form
-        class="form"
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    className="title"
+    onChange={[Function]}
+    placeholder="Title (optional)"
+    type="text"
+    value=""
+  />
+  <hr
+    className="horizontal-line"
+  />
+  <textarea
+    className="text-area"
+    onChange={[Function]}
+    placeholder="Describe your experience here..."
+    rows="10"
+    value=""
+  />
+  <div
+    className="createdAt-section"
+  >
+    <p
+      className="createdAt-section__text"
     >
-        <input
-            class="title"
-            type="text"
-            placeholder="Title (optional)"
-            value=""
-        />
-        <hr
-            class="horizontal-line"
-        />
-        <textarea
-            rows="10"
-            class="text-area"
-            placeholder="Describe your experience here..."
-        />
-        <div
-            class="createdAt-section"
-        >
-            <p
-                class="createdAt-section__text"
-            >
-                01 Jan 1970 01:00
-            </p>
-            <button
-                type="button"
-                class="edit-button"
-            >
-                <div>
-                    <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        data-prefix="fas"
-                        data-icon="edit"
-                        class="svg-inline--fa fa-edit fa-w-18 edit-icon"
-                        role="img"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 576 512"
-                    >
-                        <path
-                            fill="currentColor"
-                            d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"
-                        />
-                    </svg>
-                </div>
-            </button>
-        </div>
-        <div
-            class="button-container"
-        >
-            <div
-                class="remove-button-container"
-            />
-            <div
-                class="other-button-container"
-            >
-                <button
-                    type="submit"
-                    class="button button--right"
-                >
-                    Save
-                </button>
-                <button
-                    type="button"
-                    class="button button--right button--cancel"
-                >
-                    Cancel
-                </button>
-            </div>
-        </div>
-    </form>
-</div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
+      01 Jan 1970 01:00
+    </p>
+    <button
+      className="edit-button"
+      onClick={[Function]}
+      type="button"
+    >
+      <Component
+        class="edit-icon"
+        icon={
+          Object {
+            "icon": Array [
+              576,
+              512,
+              Array [],
+              "f044",
+              "M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z",
+            ],
+            "iconName": "edit",
+            "prefix": "fas",
+          }
+        }
+      />
+    </button>
+  </div>
+  <Component />
+  <div
+    className="button-container"
+  >
+    <div
+      className="remove-button-container"
+    />
+    <div
+      className="other-button-container"
+    >
+      <button
+        className="button button--right"
+        type="submit"
+      >
+        Save
+      </button>
+      <button
+        className="button button--right button--cancel"
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`should render EntryForm correctly with entry data and delete button 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    className="title"
+    onChange={[Function]}
+    placeholder="Title (optional)"
+    type="text"
+    value="title"
+  />
+  <hr
+    className="horizontal-line"
+  />
+  <textarea
+    className="text-area"
+    onChange={[Function]}
+    placeholder="Describe your experience here..."
+    rows="10"
+    value="This is another entry"
+  />
+  <div
+    className="createdAt-section"
+  >
+    <p
+      className="createdAt-section__text"
+    >
+      01 Jan 1970 00:59
+    </p>
+    <button
+      className="edit-button"
+      onClick={[Function]}
+      type="button"
+    >
+      <Component
+        class="edit-icon"
+        icon={
+          Object {
+            "icon": Array [
+              576,
+              512,
+              Array [],
+              "f044",
+              "M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z",
+            ],
+            "iconName": "edit",
+            "prefix": "fas",
+          }
+        }
+      />
+    </button>
+  </div>
+  <Component />
+  <div
+    className="button-container"
+  >
+    <div
+      className="remove-button-container"
+    >
+      <button
+        className="button button--delete"
+        onClick={[Function]}
+        type="button"
+      >
+        Delete
+      </button>
+    </div>
+    <div
+      className="other-button-container"
+    >
+      <button
+        className="button button--right"
+        type="submit"
+      >
+        Save
+      </button>
+      <button
+        className="button button--right button--cancel"
+        onClick={[Function]}
+        type="button"
+      >
+        Cancel
+      </button>
+    </div>
+  </div>
+</form>
 `;

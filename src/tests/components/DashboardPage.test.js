@@ -1,8 +1,8 @@
 import React from 'react';
 import DashboardPage from '../../components/DashboardPage';
-import { renderWithReduxState } from '../store/mockStore';
+import { mountWithReduxState } from '../store/mockStore';
 
 test('should render dashboard page correctly', () => {
-  const component = renderWithReduxState(<DashboardPage />);
-  expect(component).toMatchSnapshot();
+  const wrapper = mountWithReduxState(<DashboardPage />);
+  expect(wrapper).toMatchSnapshot();
 });
