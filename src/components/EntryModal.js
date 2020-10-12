@@ -5,6 +5,7 @@ import EntryForm from './EntryForm';
 export default (props) => {
   return (
     <ReactModal
+      ariaHideApp={false}
       className='modal'
       isOpen={props.showModal}
       onRequestClose={props.closeModal}

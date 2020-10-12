@@ -10,7 +10,6 @@
     "dev-server": "webpack-dev-server",
     "test": "cross-env NODE_ENV=test jest --config=jest.config.json",
     "test:watch": "yarn test --watch",
-    "start": "node server/server.js",
     "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
@@ -44,7 +43,7 @@
     "react-addons-shallow-compare": "15.6.0",
     "react-dates": "12.7.0",
     "react-dom": "^16.13.1",
-    "react-modal": "^3.0.0-rc2",
+    "react-modal": "^3.11.2",
     "react-redux": "^7.2.1",
     "react-router-dom": "4.2.2",
     "redux": "^4.0.5",

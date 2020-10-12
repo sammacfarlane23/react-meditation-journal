@@ -115,7 +115,7 @@ exports[`should render dashboard page correctly 1`] = `
             showModal={false}
           >
             <Modal
-              ariaHideApp={true}
+              ariaHideApp={false}
               bodyOpenClassName="ReactModal__Body--open"
               className="modal"
               closeTimeoutMS={300}
@@ -124,8 +124,11 @@ exports[`should render dashboard page correctly 1`] = `
               onRequestClose={[Function]}
               parentSelector={[Function]}
               portalClassName="ReactModalPortal"
+              role="dialog"
+              shouldCloseOnEsc={true}
               shouldCloseOnOverlayClick={true}
               shouldFocusAfterRender={true}
+              shouldReturnFocusAfterClose={true}
             >
               <Portal
                 containerInfo={
@@ -135,7 +138,7 @@ exports[`should render dashboard page correctly 1`] = `
                 }
               >
                 <ModalPortal
-                  ariaHideApp={true}
+                  ariaHideApp={false}
                   bodyOpenClassName="ReactModal__Body--open"
                   className="modal"
                   closeTimeoutMS={300}
@@ -170,8 +173,11 @@ exports[`should render dashboard page correctly 1`] = `
                   onRequestClose={[Function]}
                   parentSelector={[Function]}
                   portalClassName="ReactModalPortal"
+                  role="dialog"
+                  shouldCloseOnEsc={true}
                   shouldCloseOnOverlayClick={true}
                   shouldFocusAfterRender={true}
+                  shouldReturnFocusAfterClose={true}
                   style={
                     Object {
                       "content": Object {},
