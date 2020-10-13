@@ -6,6 +6,7 @@ import {
   faSignOutAlt,
   faTimes,
 } from '@fortawesome/free-solid-svg-icons';
+
 import EntryListFilters from './EntryListFilters';
 import { startLogout } from '../actions/auth';
 import { setTextFilter } from '../actions/filters';
@@ -54,12 +55,24 @@ export class Header extends React.Component {
             <div className='header__right'>
               <button className='button--big' onClick={this.showHideSearch}>
                 {this.state.isSearchShown ? (
-                  <IconComponent icon={faTimes} size='2x' />
+                  <IconComponent
+                    aria-label='cancel-button'
+                    icon={faTimes}
+                    size='2x'
+                  />
                 ) : (
-                  <IconComponent icon={faSearch} size='2x' />
+                  <IconComponent
+                    aria-label='search-button'
+                    icon={faSearch}
+                    size='2x'
+                  />
                 )}
               </button>
-              <button className='button--big' onClick={this.props.startLogout}>
+              <button
+                className='button--big'
+                aria-label='logout-button'
+                onClick={this.props.startLogout}
+              >
                 <IconComponent icon={faSignOutAlt} size='2x' />
               </button>
             </div>

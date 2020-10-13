@@ -1,5 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`should render EntryForm with entry data passed down as prop 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Component
+    selectedEntry={
+      Object {
+        "createdAt": 0,
+        "entryText": "This is an entry",
+        "id": "1",
+        "title": "",
+      }
+    }
+  >
+    <Modal
+      ariaHideApp={false}
+      bodyOpenClassName="ReactModal__Body--open"
+      className="modal"
+      closeTimeoutMS={300}
+      contentLabel="Entry View"
+      isOpen={false}
+      onRequestClose={undefined}
+      parentSelector={[Function]}
+      portalClassName="ReactModalPortal"
+      role="dialog"
+      shouldCloseOnEsc={true}
+      shouldCloseOnOverlayClick={true}
+      shouldFocusAfterRender={true}
+      shouldReturnFocusAfterClose={true}
+    >
+      <Portal
+        containerInfo={
+          <div
+            class="ReactModalPortal"
+          />
+        }
+      >
+        <ModalPortal
+          ariaHideApp={false}
+          bodyOpenClassName="ReactModal__Body--open"
+          className="modal"
+          closeTimeoutMS={300}
+          contentLabel="Entry View"
+          defaultStyles={
+            Object {
+              "content": Object {
+                "WebkitOverflowScrolling": "touch",
+                "background": "#fff",
+                "border": "1px solid #ccc",
+                "borderRadius": "4px",
+                "bottom": "40px",
+                "left": "40px",
+                "outline": "none",
+                "overflow": "auto",
+                "padding": "20px",
+                "position": "absolute",
+                "right": "40px",
+                "top": "40px",
+              },
+              "overlay": Object {
+                "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                "bottom": 0,
+                "left": 0,
+                "position": "fixed",
+                "right": 0,
+                "top": 0,
+              },
+            }
+          }
+          isOpen={false}
+          onRequestClose={undefined}
+          parentSelector={[Function]}
+          portalClassName="ReactModalPortal"
+          role="dialog"
+          shouldCloseOnEsc={true}
+          shouldCloseOnOverlayClick={true}
+          shouldFocusAfterRender={true}
+          shouldReturnFocusAfterClose={true}
+          style={
+            Object {
+              "content": Object {},
+              "overlay": Object {},
+            }
+          }
+        />
+      </Portal>
+    </Modal>
+  </Component>
+</Provider>
+`;
+
 exports[`should render EntryModal correctly 1`] = `
 Object {
   "asFragment": [Function],

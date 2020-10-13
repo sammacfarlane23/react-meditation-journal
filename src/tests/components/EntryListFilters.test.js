@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
 import { screen, fireEvent } from '@testing-library/react';
 import EntryListFilters from '../../components/EntryListFilters';
 import { renderWithReduxState } from '../store/mockStore';

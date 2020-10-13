@@ -45,6 +45,7 @@ Object {
                         </button>
                         <button
                             class="button--big"
+                            aria-label="logout-button"
                         >
                             <div>
                                 <svg
@@ -111,6 +112,7 @@ Object {
                     </button>
                     <button
                         class="button--big"
+                        aria-label="logout-button"
                     >
                         <div>
                             <svg
