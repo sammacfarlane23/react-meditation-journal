@@ -8,6 +8,7 @@ Object {
         <div>
             <input
                 type="text"
+                aria-label="search-input"
                 placeholder="Search entries"
                 class="search-bar"
                 value=""
@@ -19,6 +20,7 @@ Object {
     <div>
         <input
             type="text"
+            aria-label="search-input"
             placeholder="Search entries"
             class="search-bar"
             value=""

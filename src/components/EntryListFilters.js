@@ -14,6 +14,7 @@ export default () => {
     <div>
       <input
         type='text'
+        aria-label='search-input'
         autoFocus
         placeholder='Search entries'
         value={filters.text}

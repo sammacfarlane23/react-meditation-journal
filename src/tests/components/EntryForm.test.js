@@ -37,7 +37,7 @@ test('should set entryText on textarea change', () => {
   wrapper.find('textarea').simulate('change', {
     target: { value },
   });
-  expect(wrapper.find('.text-area').props().value).toBe(value);
+  expect(wrapper.find('textarea').props().value).toBe(value);
 });
 
 test('should call onSubmit prop for valid form submission', () => {
