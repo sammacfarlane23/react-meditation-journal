@@ -1,0 +1,13 @@
+.entry-list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 10rem $s-size 12rem $s-size;
+  min-width: 32rem;
+  @media (min-width: $desktop-breakpoint) {
+    margin-bottom: $l-size;
+  }
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    margin: 14rem $xxxl-size 16rem $xxxl-size;
+  }
+}

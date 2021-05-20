@@ -1,0 +1,143 @@
+.button {
+  background: $light-blue;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: $font-size-small;
+  font-weight: 300;
+  line-height: 1;
+  padding: $s-size;
+  width: $button-width;
+  text-decoration: none;
+  outline: none;
+  &:hover {
+    background: lighten($color: $light-blue, $amount: 6%);
+  }
+}
+
+.button--link {
+  color: black;
+  background: none;
+  &:hover {
+    background: white;
+  }
+}
+
+.button--login-google {
+  background: #de5246;
+  padding: $s-size;
+  width: auto;
+  font-size: $font-size-large;
+  box-shadow: 0 2px #888;
+  &:active {
+    box-shadow: 0 1px #888;
+    transform: translateY(1px);
+  }
+  &:hover {
+    background: lighten($color: #de5246, $amount: 6%);
+  }
+  @media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 2) {
+    font-size: 3.5rem;
+    padding: $l-size;
+    border-radius: 15px;
+  }
+}
+
+.button--login-facebook {
+  background: #3b5998;
+  padding: $s-size;
+  width: auto;
+  font-size: $font-size-large;
+  box-shadow: 0 2px #888;
+  &:active {
+    box-shadow: 0 1px #888;
+    transform: translateY(1px);
+  }
+  &:hover {
+    background: lighten($color: #3b5998, $amount: 6%);
+  }
+}
+
+.login-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  width: auto;
+  margin: 0 1.4rem;
+}
+
+.button--delete {
+  background: rgb(250, 60, 60);
+  margin: 0 1rem;
+  margin-right: 0;
+  &:hover {
+    background: lighten(rgb(250, 60, 60), 6%);
+  }
+}
+
+.button--cancel {
+  background: white;
+  color: black;
+  border: 1px solid lighten($dark-grey, 50%);
+  &:hover {
+    border-color: black;
+    background: white;
+  }
+}
+
+.edit-button {
+  background: none;
+  border: none;
+}
+
+.edit-icon {
+  color: darken($light-grey, 10%);
+  &:hover {
+    color: $light-blue;
+  }
+}
+
+.button--right {
+  margin: 0 1rem;
+  margin-right: 0;
+}
+
+.button--big {
+  color: white;
+  &:hover {
+    color: $light-grey;
+  }
+  padding: $m-size;
+  background: none;
+  border: none;
+  position: relative;
+  left: 10%;
+  outline: none;
+}
+
+.circular-container {
+  background-image: linear-gradient(
+    45deg,
+    darken($light-blue, 20%),
+    $light-blue
+  );
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.4);
+  &:hover {
+    background: lighten($color: $light-blue, $amount: 6%);
+  }
+}
+
+.button-position {
+  background: none;
+  position: fixed;
+  bottom: 0;
+  top: 85%;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+}

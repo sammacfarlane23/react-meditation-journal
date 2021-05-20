@@ -1,0 +1,196 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render dashboard page correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Component>
+    <div
+      className="dashboard-layout"
+    >
+      <div
+        className="content-container"
+      >
+        <Component>
+          <div
+            className="entry-list"
+          >
+            <div
+              className="entry-item entry-item--message"
+            >
+              Welcome to Meditation Journal App. Click the plus button below to add an entry.
+            </div>
+          </div>
+        </Component>
+      </div>
+      <Component>
+        <div
+          className="button-position"
+        >
+          <button
+            className="button--big circular-container"
+            onClick={[Function]}
+          >
+            <Component
+              icon={
+                Object {
+                  "icon": Array [
+                    448,
+                    512,
+                    Array [],
+                    "f067",
+                    "M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z",
+                  ],
+                  "iconName": "plus",
+                  "prefix": "fas",
+                }
+              }
+              size="2x"
+            >
+              <div>
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon={
+                    Object {
+                      "icon": Array [
+                        448,
+                        512,
+                        Array [],
+                        "f067",
+                        "M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z",
+                      ],
+                      "iconName": "plus",
+                      "prefix": "fas",
+                    }
+                  }
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size="2x"
+                  spin={false}
+                  swapOpacity={false}
+                  symbol={false}
+                  title=""
+                  transform={null}
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-plus fa-w-14 fa-2x "
+                    data-icon="plus"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 448 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </FontAwesomeIcon>
+              </div>
+            </Component>
+          </button>
+          <Component
+            closeModal={[Function]}
+            onSubmit={[Function]}
+            showModal={false}
+          >
+            <Modal
+              ariaHideApp={false}
+              bodyOpenClassName="ReactModal__Body--open"
+              className="modal"
+              closeTimeoutMS={300}
+              contentLabel="Entry View"
+              isOpen={false}
+              onRequestClose={[Function]}
+              parentSelector={[Function]}
+              portalClassName="ReactModalPortal"
+              role="dialog"
+              shouldCloseOnEsc={true}
+              shouldCloseOnOverlayClick={true}
+              shouldFocusAfterRender={true}
+              shouldReturnFocusAfterClose={true}
+            >
+              <Portal
+                containerInfo={
+                  <div
+                    class="ReactModalPortal"
+                  />
+                }
+              >
+                <ModalPortal
+                  ariaHideApp={false}
+                  bodyOpenClassName="ReactModal__Body--open"
+                  className="modal"
+                  closeTimeoutMS={300}
+                  contentLabel="Entry View"
+                  defaultStyles={
+                    Object {
+                      "content": Object {
+                        "WebkitOverflowScrolling": "touch",
+                        "background": "#fff",
+                        "border": "1px solid #ccc",
+                        "borderRadius": "4px",
+                        "bottom": "40px",
+                        "left": "40px",
+                        "outline": "none",
+                        "overflow": "auto",
+                        "padding": "20px",
+                        "position": "absolute",
+                        "right": "40px",
+                        "top": "40px",
+                      },
+                      "overlay": Object {
+                        "backgroundColor": "rgba(255, 255, 255, 0.75)",
+                        "bottom": 0,
+                        "left": 0,
+                        "position": "fixed",
+                        "right": 0,
+                        "top": 0,
+                      },
+                    }
+                  }
+                  isOpen={false}
+                  onRequestClose={[Function]}
+                  parentSelector={[Function]}
+                  portalClassName="ReactModalPortal"
+                  role="dialog"
+                  shouldCloseOnEsc={true}
+                  shouldCloseOnOverlayClick={true}
+                  shouldFocusAfterRender={true}
+                  shouldReturnFocusAfterClose={true}
+                  style={
+                    Object {
+                      "content": Object {},
+                      "overlay": Object {},
+                    }
+                  }
+                />
+              </Portal>
+            </Modal>
+          </Component>
+        </div>
+      </Component>
+    </div>
+  </Component>
+</Provider>
+`;
