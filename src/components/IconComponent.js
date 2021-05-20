@@ -1,7 +1,7 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default (props) => (
+const IconComponent = (props) => (
   <div>
     <FontAwesomeIcon
       icon={props.icon}
@@ -10,3 +10,5 @@ export default (props) => (
     />
   </div>
 );
+
+export default IconComponent;

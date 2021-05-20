@@ -1,15 +1,15 @@
-import React from 'react';
-import ReactModal from 'react-modal';
-import EntryForm from './EntryForm';
+import React from "react";
+import ReactModal from "react-modal";
+import EntryForm from "./EntryForm";
 
-export default (props) => {
+const EntryModal = (props) => {
   return (
     <ReactModal
       ariaHideApp={false}
-      className='modal'
+      className="modal"
       isOpen={props.showModal}
       onRequestClose={props.closeModal}
-      contentLabel='Entry View'
+      contentLabel="Entry View"
       closeTimeoutMS={300}
     >
       <EntryForm
@@ -22,3 +22,5 @@ export default (props) => {
     </ReactModal>
   );
 };
+
+export default EntryModal;

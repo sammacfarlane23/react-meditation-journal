@@ -2,7 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { startGoogleLogin } from "../actions/auth";
 
-export default () => {
+const LoginPage = () => {
   const dispatch = useDispatch();
 
   return (
@@ -22,3 +22,5 @@ export default () => {
     </div>
   );
 };
+
+export default LoginPage;

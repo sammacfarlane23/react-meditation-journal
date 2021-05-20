@@ -1,8 +1,8 @@
-import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { setTextFilter } from '../actions/filters';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setTextFilter } from "../actions/filters";
 
-export default () => {
+const EntryListFilters = () => {
   const dispatch = useDispatch();
   const filters = useSelector((state) => state.filters);
 
@@ -13,14 +13,16 @@ export default () => {
   return (
     <div>
       <input
-        type='text'
-        aria-label='search-input'
+        type="text"
+        aria-label="search-input"
         autoFocus
-        placeholder='Search entries'
+        placeholder="Search entries"
         value={filters.text}
         onChange={onTextChange}
-        className='search-bar'
+        className="search-bar"
       ></input>
     </div>
   );
 };
+
+export default EntryListFilters;
