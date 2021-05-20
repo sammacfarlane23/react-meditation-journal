@@ -1,8 +1,8 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { Route, Redirect } from 'react-router-dom';
+import React from "react";
+import { useSelector } from "react-redux";
+import { Route, Redirect } from "react-router-dom";
 
-export default ({ component: Component, ...rest }) => {
+const PublicRoute = ({ component: Component, ...rest }) => {
   const isAuthenticated = useSelector((state) => !!state.auth.uid);
 
   return (
@@ -10,7 +10,7 @@ export default ({ component: Component, ...rest }) => {
       {...rest}
       component={(props) =>
         isAuthenticated ? (
-          <Redirect to='/dashboard' />
+          <Redirect to="/dashboard" />
         ) : (
           <Component {...props} />
         )
@@ -18,3 +18,5 @@ export default ({ component: Component, ...rest }) => {
     />
   );
 };
+
+export default PublicRoute;

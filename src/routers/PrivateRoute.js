@@ -1,9 +1,9 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
-import { Route, Redirect } from 'react-router-dom';
-import Header from '../components/Header';
+import React from "react";
+import { useSelector } from "react-redux";
+import { Route, Redirect } from "react-router-dom";
+import Header from "../components/Header";
 
-export default ({ component: Component, ...rest }) => {
+const PrivateRoute = ({ component: Component, ...rest }) => {
   // rest is just a variable name for all the other props that weren't destructured
   const isAuthenticated = useSelector((state) => !!state.auth.uid);
 
@@ -17,9 +17,11 @@ export default ({ component: Component, ...rest }) => {
             <Component {...props} />
           </div>
         ) : (
-          <Redirect to='/' />
+          <Redirect to="/" />
         )
       }
     />
   );
 };
+
+export default PrivateRoute;

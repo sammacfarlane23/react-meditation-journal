@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import moment from 'moment';
-import { useDispatch } from 'react-redux';
-import EntryModal from './EntryModal';
-import { startEditEntry, startRemoveEntry } from '../actions/entries';
+import React, { useState } from "react";
+import moment from "moment";
+import { useDispatch } from "react-redux";
+import EntryModal from "./EntryModal";
+import { startEditEntry, startRemoveEntry } from "../actions/entries";
 
-export default ({ id, title, entryText, createdAt }) => {
+const EntryItem = ({ id, title, entryText, createdAt }) => {
   const [showModal, setShowModal] = useState(false);
 
   const dispatch = useDispatch();
@@ -29,14 +29,14 @@ export default ({ id, title, entryText, createdAt }) => {
 
   return (
     <div>
-      <button className='entry-item' onClick={openModal}>
+      <button className="entry-item" onClick={openModal}>
         <div>
-          <h2 className='entry-item__date'>
-            {moment(createdAt).format('DD MMM YYYY HH:mm')}
+          <h2 className="entry-item__date">
+            {moment(createdAt).format("DD MMM YYYY HH:mm")}
           </h2>
         </div>
-        {title && <h1 className='entry-item__title'>{title}</h1>}
-        <div className='entry-item__text'>
+        {title && <h1 className="entry-item__title">{title}</h1>}
+        <div className="entry-item__text">
           <p>{entryText}</p>
         </div>
       </button>
@@ -51,3 +51,5 @@ export default ({ id, title, entryText, createdAt }) => {
     </div>
   );
 };
+
+export default EntryItem;

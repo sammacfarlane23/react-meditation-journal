@@ -1,12 +1,12 @@
 const entriesReducerDefaultState = [];
 
-export default (state = entriesReducerDefaultState, action) => {
+const entriesReducer = (state = entriesReducerDefaultState, action) => {
   switch (action.type) {
-    case 'CREATE_ENTRY':
+    case "CREATE_ENTRY":
       return [...state, action.entry];
-    case 'REMOVE_ENTRY':
+    case "REMOVE_ENTRY":
       return state.filter(({ id }) => action.id !== id);
-    case 'EDIT_ENTRY':
+    case "EDIT_ENTRY":
       return state.map((entry) => {
         if (entry.id === action.id) {
           return {
@@ -17,9 +17,11 @@ export default (state = entriesReducerDefaultState, action) => {
           return entry;
         }
       });
-    case 'SET_ENTRIES':
+    case "SET_ENTRIES":
       return action.entries;
     default:
       return state;
   }
 };
+
+export default entriesReducer;

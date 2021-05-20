@@ -1,4 +1,4 @@
-export default (entries, { text }) => {
+const entriesSelector = (entries, { text }) => {
   return entries
     .filter((entry) => {
       const titleMatch = entry.title.toLowerCase().includes(text.toLowerCase());
@@ -13,3 +13,5 @@ export default (entries, { text }) => {
       return a.createdAt < b.createdAt ? 1 : -1;
     });
 };
+
+export default entriesSelector;

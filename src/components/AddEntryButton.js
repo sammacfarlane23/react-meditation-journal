@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import IconComponent from './IconComponent';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import EntryModal from './EntryModal';
-import { startCreateEntry } from '../actions/entries';
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import IconComponent from "./IconComponent";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import EntryModal from "./EntryModal";
+import { startCreateEntry } from "../actions/entries";
 
-export default () => {
+const AddEntryButton = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const dispatch = useDispatch();
 
@@ -23,10 +23,10 @@ export default () => {
   };
 
   return (
-    <div className='button-position'>
+    <div className="button-position">
       {!isModalOpen && (
-        <button className='button--big circular-container' onClick={showModal}>
-          <IconComponent icon={faPlus} size={'2x'} />
+        <button className="button--big circular-container" onClick={showModal}>
+          <IconComponent icon={faPlus} size={"2x"} />
         </button>
       )}
       <EntryModal
@@ -37,3 +37,5 @@ export default () => {
     </div>
   );
 };
+
+export default AddEntryButton;
