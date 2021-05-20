@@ -1,5 +1,6 @@
 {
-  "name": "react-meditation-journal-v2",
+  "name": "react-meditation-journal",
+  "author": "Sam MacFarlane",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -23,10 +24,10 @@
     "node-sass": "4.13.1",
     "normalize.css": "7.0.0",
     "raf": "3.3.2",
-    "react": "16.8.6",
+    "react": "16.13.1",
     "react-addons-shallow-compare": "15.6.0",
     "react-dates": "12.7.0",
-    "react-dom": "16.8.6",
+    "react-dom": "16.13.1",
     "react-modal": "^3.11.2",
     "react-redux": "^7.2.1",
     "react-router-dom": "^5.2.0",
